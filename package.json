@@ -1,0 +1,33 @@
+{
+  "name": "@local/dsh-voice-hotkey",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "description": "Adds a rebindable keyboard shortcut for the built-in DSH voice input: press once to start recording, again to stop and transcribe.",
+  "exports": {
+    ".": "./index.js",
+    "./client": "./client.js",
+    "./locale/*.json": "./locale/*.json",
+    "./icon": "./icon.svg"
+  },
+  "files": [
+    "index.js",
+    "client.js",
+    "cordis.patch.yml",
+    "locale/*.json",
+    "icon.svg"
+  ],
+  "dsh": {
+    "bundle": {
+      "patch": "./cordis.patch.yml"
+    },
+    "client": {
+      "platform": "web",
+      "immediately": true,
+      "inject": [
+        "@deepseek-ai/dsh-client-shortcuts",
+        "@deepseek-ai/dsh-client-locale"
+      ]
+    }
+  }
+}

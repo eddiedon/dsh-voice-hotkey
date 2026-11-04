@@ -1,0 +1,6 @@
+{
+  "meta": {
+    "title": "Voice input shortcut",
+    "description": "Adds a rebindable keyboard shortcut for the built-in voice input: press once to start recording, again to stop and transcribe."
+  }
+}

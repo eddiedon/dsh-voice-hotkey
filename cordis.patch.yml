@@ -1,0 +1,5 @@
+# One Host row puts this bundle into the profile composition. The shortcut itself
+# is a browser command, so the Host half only stays active; ./client owns the key.
+- insert:
+    - id: voice-hotkey
+      name: '@local/dsh-voice-hotkey'
